@@ -1,4 +1,4 @@
-<navigation-bar title="工时记录" back="{{false}}" color="#111827" background="#F7F8FA"></navigation-bar>
+<navigation-bar title="工时记录" back="{{false}}" color="#17201C" background="#EEF1F0"></navigation-bar>
 
 <view class="page">
   <scroll-view
@@ -9,6 +9,16 @@
     scroll-into-view="{{scrollIntoView}}"
   >
     <view class="message-list">
+      <view class="summary">
+        <view class="summary-copy">
+          <text class="summary-kicker">今日记录</text>
+          <text class="summary-title">语音转文字后确认</text>
+        </view>
+        <view class="summary-badge">
+          <text>待记录</text>
+        </view>
+      </view>
+
       <view
         wx:for="{{messages}}"
         wx:key="id"

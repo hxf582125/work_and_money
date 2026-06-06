@@ -1,7 +1,7 @@
 page {
   height: 100vh;
-  background: #f7f8fa;
-  color: #111827;
+  background: #eef1f0;
+  color: #17201c;
 }
 
 .page {
@@ -9,7 +9,7 @@ page {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  background: #f7f8fa;
+  background: #eef1f0;
 }
 
 .conversation {
@@ -20,13 +20,57 @@ page {
 
 .message-list {
   min-height: 100%;
-  padding: 32rpx 28rpx 180rpx;
+  padding: 24rpx 24rpx 184rpx;
   box-sizing: border-box;
+}
+
+.summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 132rpx;
+  margin-bottom: 30rpx;
+  padding: 26rpx 28rpx;
+  box-sizing: border-box;
+  border: 1rpx solid rgba(23, 32, 28, 0.08);
+  border-radius: 8px;
+  background: #f8faf9;
+  box-shadow: 0 12rpx 28rpx rgba(28, 42, 36, 0.06);
+}
+
+.summary-copy {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.summary-kicker {
+  color: #66716c;
+  font-size: 24rpx;
+  line-height: 1.3;
+}
+
+.summary-title {
+  margin-top: 8rpx;
+  color: #17201c;
+  font-size: 34rpx;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.summary-badge {
+  flex-shrink: 0;
+  padding: 10rpx 16rpx;
+  border-radius: 999px;
+  background: #233b34;
+  color: #f7faf8;
+  font-size: 23rpx;
+  line-height: 1;
 }
 
 .message {
   display: flex;
-  margin-bottom: 24rpx;
+  margin-bottom: 22rpx;
 }
 
 .message--assistant {
@@ -38,34 +82,36 @@ page {
 }
 
 .bubble {
-  max-width: 78%;
+  max-width: 79%;
   padding: 22rpx 24rpx;
   border-radius: 8px;
   box-sizing: border-box;
   font-size: 30rpx;
   line-height: 1.55;
   word-break: break-word;
-  box-shadow: 0 8rpx 24rpx rgba(15, 23, 42, 0.06);
 }
 
 .message--assistant .bubble {
-  background: #ffffff;
-  border: 1rpx solid #e5e7eb;
+  background: #fbfcfb;
+  border: 1rpx solid rgba(23, 32, 28, 0.08);
+  color: #17201c;
+  box-shadow: 0 8rpx 24rpx rgba(25, 38, 32, 0.06);
 }
 
 .message--user .bubble {
-  background: #0f766e;
+  background: #1f6f5d;
   color: #ffffff;
+  box-shadow: 0 8rpx 24rpx rgba(31, 111, 93, 0.16);
 }
 
 .bubble--loading {
-  color: #6b7280;
+  color: #66716c;
 }
 
 .bubble--error {
-  color: #b91c1c;
-  border-color: #fecaca;
-  background: #fff1f2;
+  color: #9f1d2c;
+  border-color: #efc3ca;
+  background: #fff5f6;
 }
 
 .message-text {
@@ -76,7 +122,7 @@ page {
   display: flex;
   align-items: center;
   gap: 18rpx;
-  margin-top: 20rpx;
+  margin-top: 18rpx;
 }
 
 .voice-bars {
@@ -107,33 +153,33 @@ page {
 }
 
 .transcript {
-  margin-top: 20rpx;
-  padding-top: 18rpx;
-  border-top: 1rpx solid #e5e7eb;
+  margin-top: 22rpx;
+  padding-top: 20rpx;
+  border-top: 1rpx solid rgba(23, 32, 28, 0.08);
 }
 
 .transcript-input {
   width: 100%;
-  min-height: 144rpx;
-  padding: 18rpx;
+  min-height: 156rpx;
+  padding: 20rpx;
   border-radius: 8px;
-  background: #f3f4f6;
-  color: #111827;
+  background: #f1f4f3;
+  color: #17201c;
   font-size: 28rpx;
-  line-height: 1.5;
+  line-height: 1.55;
   box-sizing: border-box;
 }
 
 .confirm-button {
-  width: 132rpx;
-  height: 64rpx;
+  width: 148rpx;
+  height: 66rpx;
   margin: 18rpx 0 0 auto;
   padding: 0;
   border-radius: 8px;
-  background: #0f766e;
+  background: #17201c;
   color: #ffffff;
   font-size: 26rpx;
-  line-height: 64rpx;
+  line-height: 66rpx;
 }
 
 .confirm-button::after {
@@ -141,32 +187,33 @@ page {
 }
 
 .confirm-button--hover {
-  background: #115e59;
+  background: #2f3c37;
 }
 
 .recording {
   position: fixed;
-  left: 28rpx;
-  right: 28rpx;
-  bottom: 146rpx;
+  left: 24rpx;
+  right: 24rpx;
+  bottom: 154rpx;
   z-index: 2;
-  min-height: 72rpx;
+  min-height: 76rpx;
   display: flex;
   align-items: center;
   gap: 14rpx;
   padding: 16rpx 22rpx;
-  border: 1rpx solid #99f6e4;
+  border: 1rpx solid rgba(31, 111, 93, 0.22);
   border-radius: 8px;
-  background: #ccfbf1;
-  color: #115e59;
+  background: #e0f1ec;
+  color: #1f6f5d;
   box-sizing: border-box;
+  box-shadow: 0 12rpx 28rpx rgba(31, 111, 93, 0.12);
 }
 
 .recording-dot {
   width: 16rpx;
   height: 16rpx;
   border-radius: 50%;
-  background: #dc2626;
+  background: #d33c35;
   flex-shrink: 0;
 }
 
@@ -185,12 +232,13 @@ page {
   z-index: 3;
   display: flex;
   align-items: center;
-  gap: 6rpx;
-  min-height: 112rpx;
-  padding: 14rpx 10rpx calc(14rpx + env(safe-area-inset-bottom));
+  gap: 10rpx;
+  min-height: 116rpx;
+  padding: 16rpx 14rpx calc(16rpx + env(safe-area-inset-bottom));
   box-sizing: border-box;
-  border-top: 1rpx solid #d9d9d9;
-  background: #ededed;
+  border-top: 1rpx solid rgba(23, 32, 28, 0.1);
+  background: rgba(238, 241, 240, 0.96);
+  box-shadow: 0 -10rpx 28rpx rgba(23, 32, 28, 0.06);
 }
 
 .mode-button,
@@ -219,12 +267,12 @@ page {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  border-radius: 50%;
-  color: #111827;
+  border-radius: 8px;
+  color: #233b34;
 }
 
 .mode-button--hover {
-  background: #dddddd;
+  background: rgba(23, 32, 28, 0.08);
 }
 
 .mode-button[disabled],
@@ -307,34 +355,38 @@ page {
 .input-shell {
   flex: 1;
   min-width: 0;
-  height: 72rpx;
-  padding: 0 22rpx;
-  border-radius: 5px;
-  background: #ffffff;
+  height: 76rpx;
+  padding: 0 24rpx;
+  border: 1rpx solid rgba(23, 32, 28, 0.08);
+  border-radius: 8px;
+  background: #fbfcfb;
   box-sizing: border-box;
+  box-shadow: inset 0 1rpx 0 rgba(255, 255, 255, 0.8);
 }
 
 .composer-input {
   width: 100%;
-  height: 72rpx;
-  color: #111827;
-  font-size: 32rpx;
-  line-height: 72rpx;
+  height: 74rpx;
+  color: #17201c;
+  font-size: 31rpx;
+  line-height: 74rpx;
 }
 
 .hold-button {
   flex: 1;
   min-width: 0;
-  height: 72rpx;
-  border-radius: 5px;
-  background: #ffffff;
-  color: #111827;
+  height: 76rpx;
+  border: 1rpx solid rgba(23, 32, 28, 0.08);
+  border-radius: 8px;
+  background: #fbfcfb;
+  color: #17201c;
   font-size: 31rpx;
-  line-height: 72rpx;
+  line-height: 74rpx;
+  box-shadow: inset 0 1rpx 0 rgba(255, 255, 255, 0.8);
 }
 
 .hold-button--active {
-  background: #d9d9d9;
+  background: #dfe5e3;
 }
 
 .send-button {
@@ -342,18 +394,19 @@ page {
   min-width: 108rpx !important;
   max-width: 108rpx !important;
   flex: 0 0 108rpx;
-  height: 64rpx;
+  height: 66rpx;
   padding: 0 !important;
   box-sizing: border-box;
-  border-radius: 5px;
-  background: #07c160;
+  border-radius: 8px;
+  background: #1f6f5d;
   color: #ffffff;
   font-size: 28rpx;
-  line-height: 64rpx;
+  line-height: 66rpx;
   overflow: hidden;
   white-space: nowrap;
+  box-shadow: 0 8rpx 18rpx rgba(31, 111, 93, 0.18);
 }
 
 .send-button--hover {
-  background: #06ad56;
+  background: #195c4d;
 }

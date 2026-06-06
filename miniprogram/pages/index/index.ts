@@ -55,7 +55,7 @@ async function transcribeVoiceFile(filePath: string): Promise<TranscriptResult> 
 Component({
   data: {
     messages: [
-      createMessage('assistant', '说一下今天做了什么，我会整理成工时。'),
+      createMessage('assistant', '说一段今天的工作，我会整理成可确认的文字。'),
     ] as ChatMessage[],
     inputValue: '',
     isRecording: false,
